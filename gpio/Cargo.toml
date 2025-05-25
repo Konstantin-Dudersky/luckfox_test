@@ -4,4 +4,6 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
-gpio-cdev = "0.6.0"
+gpio-cdev = { version = "0.6.0", features = ["async-tokio"]}
+tokio = {version = "*", features = ["rt-multi-thread", "macros"]}
+futures = "*"
