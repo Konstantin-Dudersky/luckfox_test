@@ -1,0 +1,19 @@
+[package]
+name = "slint"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+
+slint = { version = "*", default-features = false, features = [
+    "compat-1-2",
+    "std",
+    "backend-qt",
+    "renderer-software",
+] }
+
+[build-dependencies]
+slint-build = "*"
+
+[package.metadata.cross.target.armv7-unknown-linux-gnueabihf]
+image = "ghcr.io/slint-ui/slint/armv7-unknown-linux-gnueabihf"

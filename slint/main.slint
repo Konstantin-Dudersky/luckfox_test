@@ -1,0 +1,38 @@
+import { Button, VerticalBox, HorizontalBox } from "std-widgets.slint";
+
+export component MainWindow inherits Window {
+    width: 800px;
+    height: 480px;
+    default-font-size: 20px;
+
+    property <int> counter;
+
+    VerticalLayout {
+        alignment: center;
+        spacing: 30px;
+        width: 200px;
+
+        Button {
+            width: 100%;
+            height: 80px;
+            text: "Увеличить";
+            clicked => {
+                counter += 1;
+            }
+        }
+
+        Button {
+            width: 100%;
+            height: 80px;
+            text: "Уменьшить";
+            clicked => {
+                counter -= 1;
+            }
+        }
+
+        Text {
+            text: "Счётчик: " + counter;
+            horizontal-alignment: center;
+        }
+    }
+}
