@@ -7,9 +7,8 @@ edition = "2024"
 
 slint = { version = "*", default-features = false, features = [
     "compat-1-2",
-    "std",
-    "backend-qt",
-    "renderer-software",
+    "backend-linuxkms-noseat",
+    "renderer-skia",
 ] }
 
 [build-dependencies]
